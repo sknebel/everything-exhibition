@@ -125,6 +125,8 @@ export function createTextPlane(paragraph, width, scale = 1) {
 
     var planeGeometry = new THREE.BoxGeometry(width, height, 0.1)
     var plane = new THREE.Mesh(planeGeometry)
+    plane.editLink = "https://test.com"
+    plane.layers.enable(1)
     group.add(plane)
 
     var invisibleBoxGeometry = new THREE.BoxGeometry(
